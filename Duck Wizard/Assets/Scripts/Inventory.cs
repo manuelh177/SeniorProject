@@ -32,7 +32,7 @@ public class Inventory : MonoBehaviour
     //     
     // }
 
-    public void updateInventory(string resource, int amount)
+    public void UpdateInventory(string resource, int amount)
     {
         inventoryText.text = "";
         for (int i = 0; i < resourceCounts.Length; i++)
