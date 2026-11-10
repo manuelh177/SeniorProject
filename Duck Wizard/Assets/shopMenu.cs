@@ -7,4 +7,9 @@ public class shopMenu : MonoBehaviour
     {
         SceneManager.LoadScene("World");
     }
+
+    public void goToCraftingMenu()
+    {
+        SceneManager.LoadScene("craftingScene");
+    }
 }
