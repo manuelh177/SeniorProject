@@ -12,4 +12,16 @@ public class shopMenu : MonoBehaviour
     {
         SceneManager.LoadScene("craftingScene");
     }
+
+    public void goToBrewingMenu()
+    {
+        SceneManager.LoadScene("brewingScene");
+    }
+
+    public void goToForgingMenu()
+    {
+        SceneManager.LoadScene("craftingScene");
+        //change
+    }
+
 }
