@@ -7,4 +7,20 @@ public class shopMenu : MonoBehaviour
     {
         SceneManager.LoadScene("World");
     }
+
+    public void goToCraftingMenu()
+    {
+        SceneManager.LoadScene("craftingScene");
+    }
+
+    public void goToBrewingMenu()
+    {
+        SceneManager.LoadScene("brewingScene");
+    }
+
+    public void goToForgingMenu()
+    {
+        SceneManager.LoadScene("forgingScene");
+    }
+
 }
