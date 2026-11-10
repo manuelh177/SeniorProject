@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/brewingScene.unity
     guid: 2d4f0a1dc39e0724daa422afad0acc3f
+  - enabled: 1
+    path: Assets/Scenes/forgingScene.unity
+    guid: 5868387cd14262140846a74b66c23cbe
   m_configObjects: {}

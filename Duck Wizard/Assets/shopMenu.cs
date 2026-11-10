@@ -20,8 +20,7 @@ public class shopMenu : MonoBehaviour
 
     public void goToForgingMenu()
     {
-        SceneManager.LoadScene("craftingScene");
-        //change
+        SceneManager.LoadScene("forgingScene");
     }
 
 }
