@@ -67,4 +67,11 @@ public class Health : MonoBehaviour
     {
         return maxHealth;
     }
+    
+    //for unit testing
+    public void Initialize(int startingMaxHealth = 100)
+    {
+        maxHealth = Mathf.Max(1, startingMaxHealth);
+        currentHealth = maxHealth;
+    }
 }
