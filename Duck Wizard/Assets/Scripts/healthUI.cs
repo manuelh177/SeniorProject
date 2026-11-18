@@ -17,6 +17,8 @@ public class HealthBarUI : MonoBehaviour
 
     void UpdateBar(int current, int max)
     {
+        if (healthFill == null) return;
+
         healthFill.fillAmount = (float)current / max;
     }
 }
