@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
     [Header("Attack Settings")]
     [SerializeField] private float attackRange = 1.5f;
     [SerializeField] private int attackDamage = 1;
+    [SerializeField] private int attackEnemy = 50;
     [SerializeField] private float attackCooldown = 0.4f;
 
     [Header("Visual Feedback")]
@@ -48,6 +49,17 @@ public class PlayerAttack : MonoBehaviour
             if (resource != null)
             {
                 resource.TakeDamage(attackDamage);
+            }
+
+            Health enemyHealth = hit.GetComponentInParent<Health>();
+            if (enemyHealth != null && hit.gameObject != this.gameObject)
+            {
+                enemyHealth.TakeDamage(attackEnemy);
+                if (enemyHealth.IsDead)
+                {
+                    Debug.Log("Enemy has died and disappeared!");
+                    Destroy(hit.gameObject);
+                }
             }
         }
     }
