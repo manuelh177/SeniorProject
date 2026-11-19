@@ -9,11 +9,13 @@ public class spawnEnemy : MonoBehaviour
     {
         if (enemyToSpawn == null || playerTransform == null) return;
 
-        Vector3 randomOffset = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
-        Vector3 spawnPosition = playerTransform.position + randomOffset;
+        Vector2 randomDirection = Random.insideUnitCircle.normalized;
+
+        float randomDistance = Random.Range(2.5f, 4f);
+
+        Vector3 spawnPosition = playerTransform.position + (Vector3)(randomDirection * randomDistance);
 
         GameObject newEnemy = Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
-
         newEnemy.SetActive(true);
 
         EnemyAI ai = newEnemy.GetComponent<EnemyAI>();

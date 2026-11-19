@@ -8,6 +8,8 @@ public class EnemyAI : MonoBehaviour
     public int attackDamage = 10;
     public float attackCooldown = 1.5f;
 
+    public float chaseRange = 3f;
+
     private float attackTimer;
 
     void Update()
@@ -16,7 +18,7 @@ public class EnemyAI : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.position);
 
-        if (distance > attackRange)
+        if (distance <= chaseRange && distance > attackRange)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
