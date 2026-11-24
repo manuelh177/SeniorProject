@@ -15,10 +15,17 @@ public class HealthBarUI : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (playerHealth != null)
+        {
+            UpdateBar(playerHealth.CurrentHealth, playerHealth.MaxHealth);
+        }
+    }
+
     void UpdateBar(int current, int max)
     {
         if (healthFill == null) return;
-
         healthFill.fillAmount = (float)current / max;
     }
 }

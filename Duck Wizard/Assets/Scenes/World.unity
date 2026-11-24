@@ -20258,7 +20258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerDeath
   playerHealth: {fileID: 306594600}
-  DeathScreen: {fileID: 339173115}
+  deathScreen: {fileID: 339173115}
+  tombstonePrefab: {fileID: 4932268656674615622, guid: 9e0f7c9ce77cf364780597d1887598b0, type: 3}
 --- !u!1 &739146417
 GameObject:
   m_ObjectHideFlags: 0

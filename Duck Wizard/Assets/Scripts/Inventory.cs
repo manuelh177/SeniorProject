@@ -46,4 +46,38 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public int GetResourceAmount(string resource)
+    {
+        for (int i = 0; i < resources.Length; i++)
+        {
+            if (resources[i] == resource)
+            {
+                return resourceCounts[i];
+            }
+        }
+        return 0;
+    }
+    public string[] GetResourceNames()
+    {
+        return resources;
+    }
+
+    public int[] GetResourceCounts()
+    {
+        return resourceCounts;
+    }
+
+    public void SetResourceAmount(string resource, int amount)
+    {
+        for (int i = 0; i < resources.Length; i++)
+        {
+            if (resources[i] == resource)
+            {
+                resourceCounts[i] = amount;
+
+                UpdateInventory("", 0);
+                return;
+            }
+        }
+    }
 }
