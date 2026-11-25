@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd47f0a1dd206aa4ea5057e8d2a287eb, type: 3}
+  m_Name: CraftingMastery
+  m_EditorClassIdentifier: Assembly-CSharp::SkillData
+  skillID: crafting_mastery
+  skillName: CraftingMastery
+  branch: 1
+  description: Unlocks crafting and higher-tier crafting recipes.
+  levels:
+  - description: Unlocks basic crafting recipes.
+    costs:
+    - resourceName: Wood
+      amount: 5
+  - description: Unlocks improved crafting recipes.
+    costs:
+    - resourceName: Wood
+      amount: 10
+    - resourceName: Stone
+      amount: 5
+  - description: Unlocks intermediate crafting recipes.
+    costs:
+    - resourceName: Iron
+      amount: 10
+    - resourceName: Gold
+      amount: 5
+  - description: Unlocks advanced crafting recipes.
+    costs:
+    - resourceName: Gold
+      amount: 15
+    - resourceName: Rare Wood
+      amount: 5
+  - description: Unlocks masterwork crafting recipes.
+    costs:
+    - resourceName: Rare Ore
+      amount: 10
+    - resourceName: Rare Gems
+      amount: 5

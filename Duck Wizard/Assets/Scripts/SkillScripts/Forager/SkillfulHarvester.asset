@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd47f0a1dd206aa4ea5057e8d2a287eb, type: 3}
+  m_Name: SkillfulHarvester
+  m_EditorClassIdentifier: Assembly-CSharp::SkillData
+  skillID: skillfull_harvester
+  skillName: Skillful Harvester
+  branch: 0
+  description: Increases the chance of gathering additional resources.
+  levels:
+  - description: Increases the chance of gathering additional resources.
+    costs:
+    - resourceName: Wood
+      amount: 5
+    - resourceName: Stone
+      amount: 5
+  - description: Increases the chance of gathering additional resources.
+    costs:
+    - resourceName: Wood
+      amount: 10
+    - resourceName: Stone
+      amount: 10
+  - description: Increases the chance of gathering additional resources.
+    costs:
+    - resourceName: Iron
+      amount: 10
+    - resourceName: Wood
+      amount: 10
+  - description: Increases the chance of gathering additional resources.
+    costs:
+    - resourceName: Iron
+      amount: 15
+    - resourceName: Rare Ore
+      amount: 10
+  - description: Increases the chance of gathering additional resources.
+    costs:
+    - resourceName: Iron
+      amount: 20
+    - resourceName: Rare Ore
+      amount: 15

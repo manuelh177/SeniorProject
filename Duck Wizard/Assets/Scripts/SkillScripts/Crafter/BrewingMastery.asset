@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd47f0a1dd206aa4ea5057e8d2a287eb, type: 3}
+  m_Name: BrewingMastery
+  m_EditorClassIdentifier: Assembly-CSharp::SkillData
+  skillID: brewing_mastery
+  skillName: Brewing Mastery
+  branch: 1
+  description: Unlocks brewing and higher-tier potion recipes.
+  levels:
+  - description: Unlocks basic potion recipes.
+    costs:
+    - resourceName: Herbs
+      amount: 5
+  - description: Unlocks improved potion recipes.
+    costs:
+    - resourceName: Herbs
+      amount: 15
+  - description: Unlocks intermediate potion recipes.
+    costs:
+    - resourceName: Harbs
+      amount: 25
+    - resourceName: Iron
+      amount: 5
+  - description: Unlocks advanced potion recipes.
+    costs:
+    - resourceName: Harbs
+      amount: 20
+    - resourceName: Rare Herbs
+      amount: 10
+  - description: Unlocks masterwork potion recipes.
+    costs:
+    - resourceName: Rare Herbs
+      amount: 20
+    - resourceName: Rare Gems
+      amount: 5

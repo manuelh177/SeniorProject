@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd47f0a1dd206aa4ea5057e8d2a287eb, type: 3}
+  m_Name: FishingRodMastery
+  m_EditorClassIdentifier: Assembly-CSharp::SkillData
+  skillID: fishing_rod_mastery
+  skillName: Fishing Rod Mastery
+  branch: 1
+  description: Unlocks fishing, reduces fishing wait times, and unlocks rarer fish.
+  levels:
+  - description: Unlocks fishing and Common Fish.
+    costs:
+    - resourceName: Wood
+      amount: 5
+  - description: Reduces fishing wait times and unlocks Uncommon Fish.
+    costs:
+    - resourceName: Wood
+      amount: 10
+    - resourceName: Common Fish
+      amount: 10
+  - description: Reduces fishing wait times and unlocks Rare Fish.
+    costs:
+    - resourceName: Wood
+      amount: 10
+    - resourceName: Uncommon Fish
+      amount: 10
+  - description: Reduces fishing wait times and unlocks Legendary Fish.
+    costs:
+    - resourceName: Wood
+      amount: 15
+    - resourceName: Rare Fish
+      amount: 5

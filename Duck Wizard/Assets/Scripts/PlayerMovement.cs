@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -22,9 +21,13 @@ public class PlayerMovement : MonoBehaviour
     private float dashTimer;
     private float cooldownTimer;
 
+    // Shared player data used to retrieve purchased upgrades.
+    private PlayerData playerData;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerData = PlayerData.GetOrCreate();
     }
 
     void Update()
@@ -69,7 +72,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isDashing)
         {
-            // Dash overrides normal movement
+            // Dash overrides normal movement.
+            // Agility does not affect dash speed.
             rb.linearVelocity = dashDirection * dashSpeed;
         }
         else
@@ -79,8 +83,21 @@ public class PlayerMovement : MonoBehaviour
                 ? sprintSpeed
                 : moveSpeed;
 
+            // Apply the player's Agility upgrade bonus.
+            currentSpeed *= GetAgilityMultiplier();
+
             rb.linearVelocity = movement * currentSpeed;
         }
+    }
+
+    // Each Agility level increases walking and sprinting
+    // speed by 5% of the original movement speed.
+    private float GetAgilityMultiplier()
+    {
+        int agilityLevel = Mathf.Clamp(
+            playerData.GetSkillLevel("agility"), 0, 5);
+
+        return 1f + (agilityLevel * 0.05f);
     }
 
     void StartDash()
